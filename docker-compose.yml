@@ -1,0 +1,11 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  event-queue:
+    image: rabbitmq:3.9.9-management-alpine
+    restart: always
+    ports:
+        - '5672:5672'
+        - '15672:15672'
+    environment:
+      RABBITMQ_DEFAULT_USER: ricqueue
+      RABBITMQ_DEFAULT_PASS: ricqueue
